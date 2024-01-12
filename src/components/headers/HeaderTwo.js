@@ -15,6 +15,7 @@ function HeaderTwo(props) {
         backgroundSize: "cover",
         height: "70vh",
         border: "1px solid red",
+        marginBottom:"20px"
     }
     
     const textstyle = {

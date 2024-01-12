@@ -1,48 +1,20 @@
 import React from "react";
-import Data from "./Data";
+import Data from "../../components/products/Data";
+import Button from '@mui/material/Button';
+import { Grid } from "@mui/material";
 
 const Buttons = ({ filterItem, setItem, menuItems }) => {
   return (
-    <>
-      <div className="d-flex justify-content-center">
+      <Grid>
         {menuItems.map((Val, id) => {
-          return (
-            <button
-              className="btn-dark text-white p-1 px-2 mx-5 btn fw-bold"
-              onClick={() => filterItem(Val)}
-              key={id}
-            >
-              {Val}
-            </button>
-          );
+          <React.Fragment key={id}>
+            <Button variant="contained" color="success" size="large" onClick={() => filterItem("Vegitable")} >Vegitables</Button>
+            <Button variant="contained" color="success" size="large" onClick={() => filterItem("Fruit")} >Fruits</Button>
+            <Button variant="contained" color="success" size="large" onClick={() => filterItem("Dries")} >Dries</Button>      
+          </React.Fragment>
         })}
-        <button
-          className="btn-dark text-white p-1 px-3 mx-5 fw-bold btn"
-          onClick={() => setItem(Data)}
-        >
-          All
-        </button>
-
-        {/* <button
-          className="btn-warning text-white p-1 mx-5"
-          onClick={() => filterItem("Breakfast")}
-        >
-          Breakfast
-        </button>
-        <button
-          className="btn-warning text-white p-1 px-2 mx-5"
-          onClick={() => filterItem("Lunch")}
-        >
-          Lunch
-        </button>
-        <button
-          className="btn-warning text-white p-1 mx-5"
-          onClick={() => filterItem("Dinner")}
-        >
-          Dinner
-        </button> */}
-      </div>
-    </>
+        <Button variant="contained" color="success" size="large" onClick={() => setItem(Data)} >All</Button>
+      </Grid>
   );
 };
 

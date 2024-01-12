@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
-const heading = "WE SERVE VEGETABLES & FRUITS";
-const text = "100% FRESH & ORGANIC";
+const heading = "100% FRESH & ORGANIC";
+const text =  "WE SERVE VEGETABLES & FRUITS";
 
 function HeaderOne() {
   const headerstyle ={
@@ -17,12 +17,10 @@ function HeaderOne() {
     backgroundSize: "cover",
     height: "80vh",
     opacity: "1.0",
-    border: "1px solid red",
   }
 
   const mainstyle = {
-    marginTop: "10%",
-    padding: "5px",
+    paddingTop: "10%",
     textAlign: "center",
     fontWeight: 600,
     fontFamily: "arial",
@@ -30,7 +28,7 @@ function HeaderOne() {
   }
 
   const substyle = {
-    marginTop:"0%", 
+    margin:"3%", 
     textAlign: "center",
     fontWeight: 600,
     fontFamily: "arial",
