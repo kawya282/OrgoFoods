@@ -4,6 +4,7 @@ import Navigation from '../../components/navbar/Navigation'
 import HeaderOne from '../../components/headers/HeaderOne'
 import ProductMenu from '../../components/products/ProductMenu'
 import Services from '../../components/services/Services'
+import Footer from '../../components/footer/Footer'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Services/>
       <h1>Home page</h1>
       <ProductMenu/>
+      <Footer/>
     </div>
   )
 }

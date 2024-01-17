@@ -8,7 +8,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 function Services() {
     return (
-        <Grid container spacing={4} columns={{ xs: 12, sm: 8, md: 12}} justifyContent={'center'} marginTop={'50px'}>
+        <Grid container spacing={3} columns={{ xs: 12, sm: 8, md: 12}} justifyContent={'center'} marginTop={'50px'}>
             <Grid item>
                 <Item>
                     <LocalShippingIcon sx={{ color: 'white' , fontSize: 150, backgroundColor:'#a393b5', borderRadius:'50%', padding:'10px', marginBottom:'10px', cursor:'pointer', '&:hover': { backgroundColor: '#5f207a' } }}/>

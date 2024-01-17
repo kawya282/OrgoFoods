@@ -13,13 +13,11 @@ function HeaderTwo(props) {
         backgroundImage: 'url("./images/headerTwo.jpg")',
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: "70vh",
-        border: "1px solid red",
-        marginBottom:"20px"
+        height: "70vh"
     }
     
     const textstyle = {
-        marginTop: "10%",
+        paddingTop: "10%",
         textAlign: "center",
         fontWeight: 800,
         fontFamily: "arial",
@@ -27,7 +25,7 @@ function HeaderTwo(props) {
     }
 
     const substyle = {
-        marginTop: "0%",
+        marginTop: "3%",
         fontWeight: 800,
         fontFamily: "arial",
         color: "#ffffff"

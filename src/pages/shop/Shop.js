@@ -7,6 +7,7 @@ import ProductCard from '../../components/products/ProductCard';
 import FilterButton from '../../components/FilterButton';
 import { Grid } from '@mui/material';
 import Item from '@mui/material/Grid';
+import Footer from '../../components/footer/Footer';
 
 function Shop() {
   const [product, setItem] = useState(Data);
@@ -34,6 +35,7 @@ function Shop() {
         <ProductCard product={product} />
       </Grid>
       <h1>Shop page</h1>
+      <Footer/>
     </div>
   )
 }
