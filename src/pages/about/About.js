@@ -6,6 +6,7 @@ import Intro from '../../components/services/Intro'
 import Footer from '../../components/footer/Footer'
 import Testimonial from '../../components/services/Testimonial'
 import Reward from '../../components/services/Reward'
+import ContactForm from '../../components/contact/ContactForm'
 
 function About() {
   return (
@@ -15,7 +16,7 @@ function About() {
       <Intro/>
       <Reward/>
       <Testimonial/>
-      <h1>About page</h1>
+      <ContactForm/>
       <Footer/>
     </div>
   )

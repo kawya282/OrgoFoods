@@ -8,8 +8,8 @@ import { Avatar } from '@mui/material';
 function Testimonial() {
   return (
     <Container className='mt-4 pt-4'>
-        <h1>Our Products</h1>
-        <h4>Protect the health of every home</h4>
+        <h1>Testimonial</h1>
+        <h4>Our Customers Says...</h4>
         <Row xs={1} md={3} className="mt-4 g-1">
             <Col>
                 <Card>
