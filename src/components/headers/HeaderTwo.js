@@ -14,6 +14,7 @@ function HeaderTwo(props) {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         height: "70vh"
+        
     }
     
     const textstyle = {
@@ -21,6 +22,7 @@ function HeaderTwo(props) {
         textAlign: "center",
         fontWeight: 800,
         fontFamily: "arial",
+        fontFamily: "Poppins",
         color: "#ffffff"
     }
 
@@ -28,6 +30,7 @@ function HeaderTwo(props) {
         marginTop: "3%",
         fontWeight: 800,
         fontFamily: "arial",
+        fontFamily: "Poppins",
         color: "#ffffff"
     }
     return (

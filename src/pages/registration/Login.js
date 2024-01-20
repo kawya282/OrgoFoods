@@ -1,10 +1,12 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import { Container, Form, Row } from 'react-bootstrap'
 import Button from '@mui/material/Button';
 import Col from 'react-bootstrap/Col';
 import SubFooter from '../../components/footer/SubFooter';
 import SubNavigation from '../../components/navbar/SubNavigation';
 import SignUp from './SignUp';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase/FirebaseConfig';
 
 
 function Login({ handleClose}) {
@@ -14,6 +16,25 @@ function Login({ handleClose}) {
       // Close the modal after successful login
       handleClose();
     };
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+ 
+
+  const login = async () => {
+    signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log('login complete');
+    // ...
+  })
+  .catch((error) => {
+    //const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorMessage);
+  });
+  }
 
   return (
     <div>
@@ -25,13 +46,13 @@ function Login({ handleClose}) {
                 <Form>
                     <Form.Group className="mb-3 justify-flex-start">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control type="email"/>
+                        <Form.Control type="email" onChange={(e) => setEmail(e.target.value)}/>
                     </Form.Group>    
                     <Form.Group className="mb-3">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password"/>
+                        <Form.Control type="password" onChange={(e) => setPassword(e.target.value)}/>
                     </Form.Group>
-                    <Button variant="contained" color="success" size="medium">Login</Button>
+                    <Button variant="contained" color="success" size="medium" onClick={login} >Login</Button>
                 </Form>
             </Col>   
             <Col xs={12} md={12} xl={6} className='mx-auto w-40 my-auto' style={{backgroundColor:'rgba(256,256,,256,0.1)',height:'auto',padding:'25px',borderRadius:'15px'}}>

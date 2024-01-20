@@ -8,7 +8,6 @@ function Dashboard() {
   return (
     <div>
         <Navigation/>
-        <DashboardTab/>
         <Footer/>
     </div>
   )
