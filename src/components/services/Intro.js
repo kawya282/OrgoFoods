@@ -1,26 +1,44 @@
 import React from 'react'
-import { Grid} from '@mui/material'
-import Item from '@mui/material/Grid'
+import { Col, Container, Image, Row } from 'react-bootstrap';
 
 function Intro() {
     const imageUrl = 'https://img.freepik.com/premium-photo/image-basket-with-tomatoes-onions-other-vegetables_674594-11319.jpg';
+
+    const mainstyle = {
+        padding:'5%',
+        color: '#6ab04c',
+        fontSize: '45px',
+        fontFamily: 'Courgette'
+      }
+    
+      const logostyle = {
+        color: "green",
+        fontWeight: 800,
+        fontSize: "50px"
+      }
+
+      const substyle = {
+        fontFamily: 'Courgette',
+        paddingBottom: '5%',
+        color: '#312f2f',
+        fontSize: "20px"
+      }
   return (
-    <Grid container spacing={2} columns={{ xs: 12, sm: 12, md: 12}} marginTop={'50px'}>
-        <Grid item xs={12} sm={7} md={7} marginBottom={'20px'}>
-            <Item>
-                <h3>Welcome to Orgofoods an eCommerce website</h3>
-                <h6>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the 
-                    coast of the Semantics, a large language ocean.</h6>
-                <h6>But nothing the copy said could convince her and so it didn't take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged 
+    <div>
+      <Container className='mt-4 pt-4' fluid >
+        <Row xs={2} md={1} className="mt-4 g-1 py-4  justify-content-md-center">
+            <Col xs={12} md={12} xl={6}>
+            <h3 style={mainstyle}>Welcome to <span style={logostyle}>ORGOFOODS</span> an E-Commerce website</h3>
+            <h6 style={substyle}>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the 
+                    coast of the Semantics, a large language ocean. But nothing the copy said could convince her and so it didn't take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged 
                     her into their agency, where they abused her for their.</h6>
-            </Item>
-        </Grid>
-        <Grid item xs={12} sm={5} md={5}>
-            <Item>
-                <img src={imageUrl} alt="Description"  width={'100%'}/>
-            </Item>
-        </Grid>
-    </Grid>
+            </Col>
+            <Col xs={12} md={12} xl={5}>
+                <Image src={imageUrl} alt="Description"  width={'100%'} style={{borderRadius:'15px'}}/>
+            </Col>
+        </Row>
+      </Container>
+    </div>
   )
 }
 

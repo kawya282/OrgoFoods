@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Image } from 'react-bootstrap';
 
 function DashboardTab() {
     const [value, setValue] = React.useState('1');
@@ -9,6 +11,7 @@ function DashboardTab() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   } 
+
   return (
     <div>
       <Box sx={{ width: '100%', typography: 'body1' }}>
@@ -22,209 +25,130 @@ function DashboardTab() {
                     <Tab label="Reviews" value="5" />
                 </TabList>
             </Box>
-
             <TabPanel value="1">
-		        <h1>Product Details</h1>
-		            <div className="relative overflow-x-auto ">
-                                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400  ">
-                                        <thead className="text-xs border border-gray-600 text-black uppercase bg-gray-200 shadow-[inset_0_0_8px_rgba(0,0,0,0.6)]" >
-                                            <tr>
-                                                <th scope="col" className="px-6 py-3">
-                                                    S.No
-                                                </th>
-                                                <th scope="col" className="px-6 py-3">
-                                                    Image
-                                                </th>
-                                                <th scope="col" className="px-6 py-3">
-                                                    Title
-                                                </th>
-                                                <th scope="col" className="px-6 py-3">
-                                                    Price
-                                                </th>
-                                                <th scope="col" className="px-6 py-3">
-                                                    Category
-                                                </th>
-                                                <th scope="col" className="px-6 py-3">
-                                                    Date
-                                                </th>
-                                                <th scope="col" className="px-6 py-3">
-                                                    Action
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className=''>
-                                            <tr className="bg-gray-50 border-b  dark:border-gray-700" >
-                                                <td className="px-6 py-4 text-black ">
-                                                    1.
-                                                </td>
-                                                <th scope="row" className="px-6 py-4 font-medium text-black whitespace-nowrap">
-                                                    <img className='w-16' src="https://dummyimage.com/720x400" alt="img" />
-                                                </th>
-                                                <td className="px-6 py-4 text-black ">
-                                                    Title
-                                                </td>
-                                                <td className="px-6 py-4 text-black ">
-                                                    ₹100
-                                                </td>
-                                                <td className="px-6 py-4 text-black ">
-                                                    pots
-                                                </td>
-                                                <td className="px-6 py-4 text-black ">
-                                                    12 Aug 2019
-                                                </td>
-                                                <td className="px-6 py-4">
-                                                    
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-	</TabPanel>
-        <TabPanel value="2">
-		<h1>Order Details</h1>
-		<table className="w-full text-sm text-left text-gray-500 dark:text-gray-400" >
-                                            <thead  className="text-xs text-black uppercase bg-gray-200 " >
-                                                <tr>
-                                                    <th scope="col" className="px-6 py-3">
-                                                        Payment Id
-                                                    </th>
-                                                    <th scope="col" className="px-6 py-3">
-                                                        Image
-                                                    </th>
-                                                    <th scope="col" className="px-6 py-3">
-                                                        Title
-                                                    </th>
-                                                    <th scope="col" className="px-6 py-3">
-                                                        Price
-                                                    </th>
-                                                    <th scope="col" className="px-6 py-3">
-                                                        Category
-                                                    </th>
-                                                    <th scope="col" className="px-6 py-3">
-                                                        Name
-                                                    </th>
-                                                    <th scope="col" className="px-6 py-3">
-                                                        Address
-                                                    </th>
-                                                    <th scope="col" className="px-6 py-3">
-                                                        Pincode
-                                                    </th>
-                                                    <th scope="col" className="px-6 py-3">
-                                                        Phone Number
-                                                    </th>
-                                                    <th scope="col" className="px-6 py-3">
-                                                        Email
-                                                    </th>
-                                                    <th scope="col" className="px-6 py-3">
-                                                        Date
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                               
-                                                        <tr className="bg-gray-50 border-b  dark:border-gray-700"  >
-                                                            <td className="px-6 py-4 text-black " >
-                                                               3393939
-                                                            </td>
-                                                            <th scope="row" className="px-6 py-4 font-medium text-black whitespace-nowrap">
-                                                                <img className='w-16' src="https://dummyimage.com/720x400" alt="img" />
-                                                            </th>
-                                                            <td className="px-6 py-4 text-black " >
-                                                                Title
-                                                            </td>
-                                                            <td className="px-6 py-4 text-black ">
-                                                                ₹100
-                                                            </td>
-                                                            <td className="px-6 py-4 text-black " >
-                                                                pots
-                                                            </td>
-                                                          
-                                                            <td className="px-6 py-4 text-black " >
-                                                                name
-                                                            </td>
-                                                            <td className="px-6 py-4 text-black ">
-                                                                india
-                                                            </td>
-                                                            <td className="px-6 py-4 text-black ">
-                                                                82828
-                                                            </td>
-                                                            <td className="px-6 py-4 text-black ">
-                                                               929929929929
-                                                            </td>
-                                                            <td className="px-6 py-4 text-black ">
-                                                                kkakka@gmail.com
-                                                            </td>
-                                                            <td className="px-6 py-4 text-black ">
-                                                               12 Aug 2019
-                                                            </td>
-
-                                                        </tr>
-                                                
-                                            </tbody>
-                                        </table>
-	</TabPanel>
-        <TabPanel value="3">
-		<h1>User details</h1>
-		<table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                    <thead className="text-xs text-black uppercase bg-gray-200 " >
-                                        <tr>
-                                            <th scope="col" className="px-6 py-3">
-                                                S.No
-                                            </th>
-
-                                            <th scope="col" className="px-6 py-3">
-                                                Name
-                                            </th>
-                                            <th scope="col" className="px-6 py-3">
-                                                Address
-                                            </th>
-                                            <th scope="col" className="px-6 py-3">
-                                                Pincode
-                                            </th>
-                                            <th scope="col" className="px-6 py-3">
-                                                Phone Number
-                                            </th>
-                                            <th scope="col" className="px-6 py-3">
-                                                Email
-                                            </th>
-                                            <th scope="col" className="px-6 py-3">
-                                                Date
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                      
-                                                <tr className="bg-gray-50 border-b  dark:border-gray-700" >
-                                                    <td className="px-6 py-4 text-black " >
-                                                        1.
-                                                    </td>
-                                                    <td className="px-6 py-4 text-black " >
-                                                        Name
-                                                    </td>
-                                                    <td className="px-6 py-4 text-black " >
-                                                        Address
-                                                    </td>
-                                                    <td className="px-6 py-4 text-black " >
-                                                        181919
-                                                    </td>
-                                                    <td className="px-6 py-4 text-black " >
-                                                        1991818818
-                                                    </td>
-                                                    <td className="px-6 py-4 text-black " >
-                                                       kkk@gmail.com
-                                                    </td>
-                                                    <td className="px-6 py-4 text-black " >
-                                                        12 Aug 2019
-                                                    </td>
-
-                                                </tr>
-                                    </tbody>
-                                </table>
-	</TabPanel>
-	<TabPanel value="4">Item Three</TabPanel>
-	<TabPanel value="5">Item Three</TabPanel>
-      </TabContext>
-    </Box>
+                <TableContainer component={Paper}>
+                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Product ID</TableCell>
+                            <TableCell align="right">Product Name</TableCell>
+                            <TableCell align="right">Product Image</TableCell>
+                            <TableCell align="right">Qunatity&nbsp;(kg)</TableCell>
+                            <TableCell align="right">Price&nbsp;(Rs.)</TableCell>
+                            <TableCell align="right">Description</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                            <TableCell component="th" scope="row">P01</TableCell>
+                            <TableCell align="right">Carrot</TableCell>
+                            <TableCell align="right"><Image src='https://img.freepik.com/free-photo/carrots-fresh-organic-carrots-fresh-garden-carrots-bunch-f_1391-237.jpg' width={50} height={50}/></TableCell>
+                            <TableCell align="right">2</TableCell>
+                            <TableCell align="right">250.00</TableCell>
+                            <TableCell align="right">Far far away, behind the word mountains, far from the countries Vokalia and <br/> Consonantia, there live the blind texts.</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+                </TableContainer>
+            </TabPanel>
+            <TabPanel value="2">
+            <TableContainer component={Paper}>
+                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Order ID</TableCell>
+                            <TableCell align="right">First Name</TableCell>
+                            <TableCell align="right">Last Name</TableCell>
+                            <TableCell align="right">Street</TableCell>
+                            <TableCell align="right">State</TableCell>
+                            <TableCell align="right">City</TableCell>
+                            <TableCell align="right">Zip Code</TableCell>
+                            <TableCell align="right">Contact No</TableCell>
+                            <TableCell align="right">Total Bill&nbsp;(Rs.) </TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                            <TableCell component="th" scope="row">P01</TableCell>
+                            <TableCell align="right">Nimal</TableCell>
+                            <TableCell align="right">Perera</TableCell>
+                            <TableCell align="right">185</TableCell>
+                            <TableCell align="right">Kandy Road</TableCell>
+                            <TableCell align="right">Kadawatha</TableCell>
+                            <TableCell align="right">11456</TableCell>
+                            <TableCell align="right">+94 1127896790</TableCell>
+                            <TableCell align="right">1500.00</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+                </TableContainer>
+            </TabPanel>
+            <TabPanel value="3">
+            <TableContainer component={Paper}>
+                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>User ID</TableCell>
+                            <TableCell align="right">Name</TableCell>
+                            <TableCell align="right">Email</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                            <TableCell component="th" scope="row">U01</TableCell>
+                            <TableCell align="right">Nimal</TableCell>
+                            <TableCell align="right">nimal@gmail.com</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+                </TableContainer>
+            </TabPanel>
+            <TabPanel value="4">
+            <TableContainer component={Paper}>
+                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Patner ID</TableCell>
+                            <TableCell align="right">Partner Name</TableCell>
+                            <TableCell align="right">Location</TableCell>
+                            <TableCell align="right">Email</TableCell>
+                            <TableCell align="right">Contact No</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                            <TableCell component="th" scope="row">PS01</TableCell>
+                            <TableCell align="right">Mr. M.S.Perera</TableCell>
+                            <TableCell align="right">Kadawatha</TableCell>
+                            <TableCell align="right">msperera@gmail.com</TableCell>
+                            <TableCell align="right">+94 77 1234 123</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+                </TableContainer>
+            </TabPanel>
+            <TabPanel value="5">
+            <TableContainer component={Paper}>
+                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Name</TableCell>
+                            <TableCell align="right">Email</TableCell>
+                            <TableCell align="right">Message</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                            <TableCell component="th" scope="row">Nimal</TableCell>
+                            <TableCell align="right">nimal@gmail.com</TableCell>
+                            <TableCell align="right">Far far away, behind the word mountains, far from the countries Vokalia and <br/> Consonantia, there live the blind texts.</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+                </TableContainer>
+            </TabPanel>
+        </TabContext>
+      </Box>
     </div>
   )
 }

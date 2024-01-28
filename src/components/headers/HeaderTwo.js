@@ -21,7 +21,6 @@ function HeaderTwo(props) {
         paddingTop: "10%",
         textAlign: "center",
         fontWeight: 800,
-        fontFamily: "arial",
         fontFamily: "Poppins",
         color: "#ffffff"
     }
@@ -29,8 +28,6 @@ function HeaderTwo(props) {
     const substyle = {
         marginTop: "3%",
         fontWeight: 800,
-        fontFamily: "arial",
-        fontFamily: "Poppins",
         color: "#ffffff"
     }
     return (

@@ -10,7 +10,7 @@ const Buttons = ({ filterItem, setItem, menuItems }) => {
           <React.Fragment key={id}>
             <Button variant="contained" color="success" size="large" onClick={() => filterItem("Vegitable")} >Vegitables</Button>
             <Button variant="contained" color="success" size="large" onClick={() => filterItem("Fruit")} >Fruits</Button>
-            <Button variant="contained" color="success" size="large" onClick={() => filterItem("Dries")} >Dries</Button>      
+            <Button variant="contained" color="success" size="large" onClick={() => filterItem("Dries")}>Dries</Button>      
           </React.Fragment>
         })}
         <Button variant="contained" color="success" size="large" onClick={() => setItem(Data)} >All</Button>

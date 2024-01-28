@@ -5,6 +5,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { IconButton } from '@mui/material';
+import Badge from '@mui/material/Badge';
+import { styled } from '@mui/material/styles';
 
 function Navigation() {
   const navstyle = {
@@ -24,6 +27,14 @@ function Navigation() {
     fontWeight: 500
   }
 
+  const StyledBadge = styled(Badge)(({ theme }) => ({
+    '& .MuiBadge-badge': {
+      right: -3,
+      top: 13,
+      border: `2px solid ${theme.palette.background.paper}`,
+      padding: '0 4px',
+    },
+  }));
   return (
     <div>
         <Navbar style={navstyle} collapseOnSelect expand="lg">
@@ -32,7 +43,13 @@ function Navigation() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="me-auto">
-                    <NavLink to='/cart' style={navlinkstyle}><ShoppingCartIcon/></NavLink>
+                    <NavLink to='/cart' style={navlinkstyle}>
+                      <IconButton aria-label="cart">
+                      <StyledBadge badgeContent={0} color="lightgreen">
+                        <ShoppingCartIcon sx={{ color: 'lightgreen' }}  />
+                      </StyledBadge>
+                      </IconButton>
+                    </NavLink>
                     <NavLink to='/login' style={navlinkstyle}><AccountCircleIcon/></NavLink>  
                   </Nav>
                   <Nav>
@@ -40,7 +57,6 @@ function Navigation() {
                     <NavLink to= '/shop' style={navlinkstyle}>SHOP</NavLink>
                     <NavLink to='/about' style={navlinkstyle}>ABOUT</NavLink>
                     <NavLink to='/joinus' style={navlinkstyle}>JOINUS</NavLink>
-                    <NavLink to='/admin' style={navlinkstyle}>ADMIN</NavLink>
                   </Nav>
                 </Navbar.Collapse>
             </Container>

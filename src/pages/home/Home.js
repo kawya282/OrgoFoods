@@ -1,10 +1,11 @@
 import React from 'react'
-import './Home.css'
 import Navigation from '../../components/navbar/Navigation'
 import HeaderOne from '../../components/headers/HeaderOne'
 import ProductMenu from '../../components/products/ProductMenu'
 import Services from '../../components/services/Services'
 import Footer from '../../components/footer/Footer'
+import Patner from '../../components/services/Patner'
+import Vision from '../../components/services/Vision'
 
 function Home() {
   return (
@@ -12,8 +13,9 @@ function Home() {
       <Navigation/>
       <HeaderOne/>
       <Services/>
-      <h1>Home page</h1>
+      <Vision/>
       <ProductMenu/>
+      <Patner/>
       <Footer/>
     </div>
   )

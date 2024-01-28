@@ -7,62 +7,77 @@ import HomeIcon from '@mui/icons-material/Home';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import PrintIcon from '@mui/icons-material/Print';
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { Image } from 'react-bootstrap';
+import SubFooter from './SubFooter';
 
 function Footer() {
+  const logostyle = {
+    color: "green",
+    fontWeight: 800,
+    fontSize: "35px"
+  }
+
+  const textstyle = {
+    textDecoration: "underline",
+    fontSize: "22px",
+    color: "#092635",
+    fontWeight: "700"
+  }
+
+  const parastyle = {
+    color: "#191919",
+    fontSize: "15px",
+    fontWeight: 500,
+
+  }
+  const navlinkstyle = {
+    paddingTop: "8%",
+    textDecoration: "none",
+    color: "#191919",
+    fontWeight: 500
+  }
+
   return (
     <div>
-        <Container fluid style={{marginTop:'50px'}}>
+        <Container fluid style={{marginTop:'50px', backgroundColor:'#D9EDBF', paddingTop:'5%'}}>
             <Row xs={1} md={2} xl={4}>
                 <Col style={{padding:'10px 5px'}}>
-                    <span>ORGOFOODS</span>
-                    <p>We are suppling fresh Vegitables and fruits to Aid customers</p>
-                    <Container>
-
-                    </Container>
+                    <span style={logostyle}>ORGOFOODS</span>
+                    <p style={parastyle}>We are suppling fresh Vegitables and fruits to Aid customers</p>
+                    <Image src='https://img.freepik.com/premium-vector/tree-logo-template-vector-icon-illustration_665655-5836.jpg' className='w-25' style={{borderRadius:'50%'}}/>
                 </Col>
                 <Col style={{padding:'5px'}}>
-                  <span>LINKS</span>
-                  <Nav className="flex-column align-items-left">
-                    <Nav.Link href="/home">Home</Nav.Link>
-                    <Nav.Link href="/shop" eventKey="link-1">Shop</Nav.Link>
-                    <Nav.Link href="/about" eventKey="link-2">About</Nav.Link>
-                    <Nav.Link href="/about" eventKey="link-2">Login</Nav.Link>
+                  <span style={textstyle} >LINKS</span>
+                  <Nav className="flex-column align-items-left" >
+                    <Nav.Link href="/home" style={navlinkstyle}>Home</Nav.Link>
+                    <Nav.Link href="/shop" eventKey="link-1" style={navlinkstyle}>Shop</Nav.Link>
+                    <Nav.Link href="/about" eventKey="link-2" style={navlinkstyle}>About</Nav.Link>
+                    <Nav.Link href="/joinus" eventKey="link-3" style={navlinkstyle}>Join Us</Nav.Link>
                   </Nav>                
                 </Col>
 
                 <Col style={{padding:'5px'}}>
-                <span>HELP</span>
+                <span style={textstyle}>HELP</span>
                   <Nav className="flex-column align-items-left">
-                    <Nav.Link href="#">Shipping Information</Nav.Link>
-                    <Nav.Link href="#" eventKey="link-1">Terms & Conditions</Nav.Link>
-                    <Nav.Link href="#" eventKey="link-2">FAQs</Nav.Link>
-                    <Nav.Link href="#" eventKey="link-2">Privacy Policy</Nav.Link>
+                    <Nav.Link href="#" style={navlinkstyle}>Shipping Information</Nav.Link>
+                    <Nav.Link href="#" eventKey="link-1" style={navlinkstyle}>Terms & Conditions</Nav.Link>
+                    <Nav.Link href="#" eventKey="link-2" style={navlinkstyle}>FAQs</Nav.Link>
+                    <Nav.Link href="#" eventKey="link-3" style={navlinkstyle}>Privacy Policy</Nav.Link>
                   </Nav>
                 </Col>
 
                 <Col style={{padding:'5px'}}>
-                <span>CONTACT</span>
+                <span style={textstyle}>CONTACT</span>
                   <Nav className="flex-column align-left">
-                    <Nav.Link href="#"><HomeIcon/>Kandy Road, Colombo.</Nav.Link>
-                    <Nav.Link href="#" eventKey="link-1"><EmailIcon/>orgofoods@info.com</Nav.Link>
-                    <Nav.Link href="#" eventKey="link-2"><LocalPhoneIcon/>+ 94 234 567 88</Nav.Link>
-                    <Nav.Link href="#" eventKey="link-2"><PrintIcon/>+ 94 234 567 89</Nav.Link>
+                    <Nav.Link style={navlinkstyle}><HomeIcon/> Kandy Road, Colombo.</Nav.Link>
+                    <Nav.Link style={navlinkstyle}><EmailIcon/> orgofoods@info.com</Nav.Link>
+                    <Nav.Link style={navlinkstyle}><LocalPhoneIcon/> + 94 234 567 88</Nav.Link>
+                    <Nav.Link style={navlinkstyle}><PrintIcon/> + 94 234 567 89</Nav.Link>
                   </Nav>
                 </Col>
             </Row>
-
-            <Row xs={1} md={2} style={{marginTop:'25px', backgroundColor:'gray', padding:'10px'}}>
-              <Col>
-                <span>© 2023 Copyright | Terms & Policy</span>
-              </Col>
-              <Col>
-                <FacebookRoundedIcon/>
-                <WhatsAppIcon/>
-              </Col>
-            </Row>
         </Container>
+        <SubFooter/>
     </div>
   )
 }

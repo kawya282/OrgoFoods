@@ -13,6 +13,7 @@ function FilterButton({ filterItem, setItem, menuItems }) {
           color="success"
           size="large"
           onClick={() => filterItem(category)}
+          style={{margin:'10px'}}
         >
           {category}
         </Button>
@@ -22,6 +23,7 @@ function FilterButton({ filterItem, setItem, menuItems }) {
         color="success"
         size="large"
         onClick={() => setItem(Data)}
+        style={{margin:'10px'}}
       >
         All
       </Button>

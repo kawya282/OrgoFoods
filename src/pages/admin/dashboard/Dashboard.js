@@ -1,14 +1,13 @@
 import React from 'react'
-import Navigation from '../../../components/navbar/Navigation'
-import Footer from '../../../components/footer/Footer'
 import DashboardTab from './DashboardTab'
+import SubNavigation from '../../../components/navbar/SubNavigation'
 
 function Dashboard() {
 
   return (
     <div>
-        <Navigation/>
-        <Footer/>
+        <SubNavigation/>
+        <DashboardTab/>
     </div>
   )
 }

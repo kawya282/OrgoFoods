@@ -11,44 +11,64 @@ let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 const text1 = "Are You Also an Organic Farmer ?";
-const text2 = "Join Us Too..."
 
 function Partnership() {
     const textstyle = {
-        paddingTop: "10%",
-        textAlign: "center",
-        fontWeight: 800,
-        fontFamily: "arial",
-        color: "black"
+        padding:'5%',
+        color: '#6ab04c',
+        fontSize: '45px',
+        fontFamily: 'Courgette'
     }
 
     const substyle = {
-        paddingTop: "10%",
-        fontWeight: 800,
-        fontFamily: "arial",
-        color: "green"
+        fontFamily: 'Courgette',
+        padding: '5%',
+        color: 'green',
+        fontSize: "50px",
+        fontWeight:'700',
     }
 
   return (
-    <Container fluid className='pt-4 pb-4' style={{backgroundColor:'lightgreen'}}>
-        <Row xs={1} md={2} className="mt-4 g-1">
-            <Col xs={{ order: 1 }} md={{ order: 1 }}>
-                <Image src='https://img.freepik.com/premium-photo/indian-farmer-cotton-field_54391-2206.jpg' fluid  alt="image1" />
+    <Container fluid className='pt-4 pb-4'>
+        <ThemeProvider theme={theme}>
+            <Typography style={textstyle} className='px-2' variant = "h2" gutterBottom>{text1}</Typography>
+        </ThemeProvider>
+        <Row xs={2} className="mt-4 g-1 mx-3 mb-4 justify-content-md-center" >
+            <Col xs={2}>
+                <Image src='https://img.freepik.com/free-photo/close-up-banana-farmer_23-2151005986.jpg' fluid/>
             </Col>
-            <Col xs={{ order: 2 }} md={{ order: 2 }}>
-                <ThemeProvider theme={theme}>
-                    <hr/>
-                    <Typography style={textstyle} className='px-2' variant = "h2" gutterBottom>{text1}</Typography>
-                </ThemeProvider>
+            <Col xs={2}>
+                <Image src='https://img.freepik.com/free-photo/portrait-countryside-worker-posing_23-2148761780.jpg' fluid/>
             </Col>
-            <Col xs={{ order: 4 }} md={{ order: 3 }}>
-                <ThemeProvider theme={theme}>
-                    <hr/>
-                    <Typography style={substyle} variant = "h1" gutterBottom>{text2}</Typography>
-                </ThemeProvider>
+            <Col xs={2}>
+                <Image src='https://img.freepik.com/free-photo/portrait-african-senior-man_23-2148833070.jpg' fluid/>
             </Col>
-            <Col xs={{ order: 3 }} md={{ order: 4 }}>
-                <Image src='https://img.freepik.com/premium-photo/african-farmer-is-using-tablet-background-working-tractor-with-cultivator-field-agriculture-innovate-cultivation-concept_73622-2210.jpg' fluid alt="image2"/>
+            <Col xs={2}>
+                <Image src='https://img.freepik.com/free-photo/portrait-countryside-worker-posing_23-2148761779.jpg' fluid/>
+            </Col>
+            <Col xs={2}>
+                <Image src='https://img.freepik.com/premium-photo/african-farmer-man-dig-prepare-planting_605596-5.jpg' fluid/>
+            </Col>
+            <Col xs={2}>
+                <Image src='https://img.freepik.com/free-photo/front-view-smiley-woman-with-harvest_23-2149894646.jpg' fluid/>
+            </Col>
+            <Col xs={2}>
+                <h3 style={substyle}>J</h3>
+            </Col>
+            <Col xs={2}>
+                <h3 style={substyle}>O</h3>
+            </Col>
+            <Col xs={2}>
+                <h3 style={substyle}>I</h3>
+            </Col>
+            <Col xs={2}>
+                <h3 style={substyle}>N</h3>
+            </Col>
+            <Col xs={2}>
+                <h3 style={substyle}>U</h3>
+            </Col>
+            <Col xs={2}>
+                <h3 style={substyle}>S</h3>
             </Col>
         </Row>    
     </Container>

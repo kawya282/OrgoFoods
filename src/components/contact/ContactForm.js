@@ -5,14 +5,21 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 
 function ContactForm() {
+  const mainstyle = {
+    color: '#6ab04c',
+    fontSize: '45px',
+    fontFamily: 'Courgette'
+  }
+
   return (
     <div>
-      <Container fluid className='mt-4 pt-4'>
+      <Container fluid className='mt-5 pt-4'>
         <Row xs={2} md={1} className="mt-4 g-1">
-            <Col xs={12} md={6}>
-                <Image src='https://img.freepik.com/premium-photo/variety-fresh-fruits-supermarket_392895-277167.jpg' fluid/>
+            <Col xs={12} md={12} xl={6}>
+                <Image src='https://img.freepik.com/premium-photo/variety-fresh-fruits-supermarket_392895-277167.jpg' fluid style={{borderRadius:'15px'}}/>
             </Col>
-            <Col xs={12} md={6} style={{padding:'25px',borderRadius:'15px',border:'2px solid grey',color:'black', height:'auto'}}>
+            <Col xs={12} md={12} xl={6} style={{padding:'25px',borderRadius:'15px',color:'black', height:'auto'}}>
+              <h3 style={mainstyle}>Message Us</h3>
                 <Form>
                     <Form.Group className="mb-3 justify-flex-start">
                         <Form.Control type="name" placeholder="Name" />
